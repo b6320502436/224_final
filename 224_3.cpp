@@ -15,25 +15,23 @@ int  main()
 		D[f+3]=A[e][f]+D[f+3];
 		if(e==f)
 		D[2*a+1]=D[2*a+1]+A[e][f];
-		if(e+f==a)
+		if(e+f==a-1)
 		D[2*a+2]=D[2*a+1]+A[e][f];
 	}
 }
 for(g=0;g<=2*a+2;g++)
 {
-	if(D[0]!=D[g])
+	if(D[0]!=D[g]||D[g]==0)
 	{
 		h=1;
-	}
+		
+	}printf("%d ",D[g]);
 }
 if(h==0)
 {
 	printf("yes\n");
 }
 else printf("no\n");
-
-
-
 
 	for(e=0;e<b;e++)
 	{
@@ -48,6 +46,20 @@ else printf("no\n");
 		E[2*a+2]=E[2*a+1]+B[e][f];
 	}
 }
+h=0;
+for(g=0;g<=2*b+2;g++)
+{
+	if(E[0]!=E[g])
+	{
+		h=1;
+	}
+}
+if(h==0)
+{
+	printf("yes\n");
+}
+else printf("no\n");
+
 		for(e=0;e<c;e++)
 	{
 		for(f=0;f<c;f++)
