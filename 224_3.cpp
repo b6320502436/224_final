@@ -14,9 +14,11 @@ int  main()
 		D[e]=A[e][f]+D[e];
 		D[f+3]=A[e][f]+D[f+3];
 		if(e==f)
-		D[2*a+1]=D[2*a+1]+A[e][f];
+		D[2*a]=D[2*a]+A[e][f];
 		if(e+f==a-1)
-		D[2*a+2]=D[2*a+1]+A[e][f];
+		{D[2*a+1]=D[2*a+1]+A[e][f];
+		printf("-%d-",A[e][f]);
+		}
 	}
 }
 for(g=0;g<=2*a+2;g++)
